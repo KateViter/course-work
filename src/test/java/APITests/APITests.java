@@ -10,18 +10,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tools.Randomizer;
 
-import java.util.Properties;
-
-
 public class APITests {
 
     // class variables
-    Properties apiProps = new Properties();
-    private final int ownerId = Integer.parseInt(apiProps.getProperty("authUserId"));
-    private final String baseUrl = apiProps.getProperty("baseUrl");
-    private final String authUser = apiProps.getProperty("authUser");
-    private final String authPassword = apiProps.getProperty("authPass");
-    private final String jsonrpcVersion = apiProps.getProperty("jsonrpcVersion");
+    private final int ownerId = 1;
+    private final String baseUrl = "http://127.0.0.1/jsonrpc.php";
+    private final String authUser = "admin";
+    private final String authPassword = "admin";
+    private final String jsonrpcVersion = "2.0";
     private int userId;
     private int projectId;
     private int taskId;
