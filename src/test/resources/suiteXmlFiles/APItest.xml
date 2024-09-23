@@ -1,4 +1,4 @@
-<suite name="API test suite" parallel="classes" thread-count="1">
+<suite name="API test suite" parallel="classes" thread-count="2">
     <test name="API test">
         <classes>
             <parameter name="parameterName" value="newParameterValue"/>
