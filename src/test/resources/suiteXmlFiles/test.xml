@@ -1,8 +1,8 @@
-<suite name="Data driver suite" parallel="classes" thread-count="5">
-    <test name="Data driver test">
+<suite name="Data driver suite" parallel="classes" thread-count="1">
+    <test name="API test">
         <classes>
             <parameter name="parameterName" value="newParameterValue"/>
-            <class name="MyTest"/>
+            <class name="APITests.APITests"/>
 
         </classes>
     </test>
