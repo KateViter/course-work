@@ -17,6 +17,7 @@
         <allure-testng-version>2.13.9</allure-testng-version>
         <extentreports-version>5.0.8</extentreports-version>
         <allure.version>2.24.0</allure.version>
+
     </properties>
 
     <dependencyManagement>
@@ -157,6 +158,8 @@
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <release>17</release>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
         </plugins>
