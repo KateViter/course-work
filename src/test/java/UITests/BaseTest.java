@@ -14,7 +14,7 @@ public class BaseTest {
 
     protected URL remoteUrl() {
         try {
-            return new URL("http://172.19.0.2:4444");
+            return new URL("http://172.18.0.2:4444");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
