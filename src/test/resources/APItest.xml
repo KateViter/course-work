@@ -1,9 +1,14 @@
-<suite name="API test suite" parallel="classes" thread-count="2">
-    <test name="API test">
+<suite name="General test suite" parallel="classes" thread-count="2">
+    <test name="API tests">
         <classes>
             <parameter name="parameterName" value="newParameterValue"/>
             <class name="APITests.APITests"/>
 
+        </classes>
+    </test>
+    <test name="UI tests">
+        <classes>
+            <class name="UITests.UITests"/>
         </classes>
     </test>
 
