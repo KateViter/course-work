@@ -15,6 +15,9 @@ public class BaseTest {
 
         ChromeOptions opt = new ChromeOptions();
         opt.addArguments("--remote-allow-origins=*");
+        opt.addArguments("--headless");  // Add this line
+        opt.addArguments("--disable-gpu"); // Disable GPU if not needed
+        opt.addArguments("--no-sandbox"); // Required for Docker
         driver =  new ChromeDriver(opt);
         driver.manage().window().maximize();
 
