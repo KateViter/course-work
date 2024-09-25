@@ -8,6 +8,6 @@ public class UITests extends BaseTest{
 
     @Test
     public void start() {
-        driver.get("http://localhost/login:4444");
+        driver.get("http://192.168.31.253/login:4444");
     }
 }
