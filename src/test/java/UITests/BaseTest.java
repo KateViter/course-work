@@ -17,7 +17,7 @@ public class BaseTest {
     protected URL startStandaloneGrid() {
         try {
 //            URL gridUrl = new URL("http://localhost/login:4444");
-            return new URL("http://localhost:" + "4444");
+            return new URL("http://127.0.0.1:" + "4444");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
