@@ -6,7 +6,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tools.Randomizer;
 
@@ -22,7 +22,7 @@ public class APITests {
     private int projectId;
     private int taskId;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         //create base data with authorization as admin to all requests & connect allure report
         RestAssured.baseURI = baseUrl;
