@@ -1,0 +1,14 @@
+<suite name="General test suite" parallel="classes" thread-count="2">
+    <test name="API tests">
+        <classes>
+            <class name="APITests.APITests"/>
+        </classes>
+    </test>
+    <test name="UI tests">
+        <classes>
+            <class name="UITests.UITests"/>
+            <class name="UITests.UILoginTests"/>
+        </classes>
+    </test>
+
+</suite>

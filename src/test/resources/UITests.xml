@@ -1,0 +1,13 @@
+<suite name="UI test suite" parallel="classes" thread-count="2">
+    <test name="UI tests">
+        <classes>
+            <class name="UITests.UITests"/>
+        </classes>
+    </test>
+    <test name="Login tests">
+        <classes>
+            <class name="UITests.UILoginTests"/>
+        </classes>
+    </test>
+
+</suite>
