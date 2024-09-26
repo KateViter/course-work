@@ -11,11 +11,15 @@ import java.net.URL;
 public class BaseTest {
 
     protected RemoteWebDriver driver;
+    // selenium-firefox to run in remote browser in another container with firefox browser
+//    private final static String remoteUrl = "http://selenium-firefox:4444";
+
+    // localhost to run locally
+    private final static String remoteUrl = "http://localhost:4444";
 
     protected URL remoteUrl() {
         try {
-            return new URL("http://selenium-firefox:4444");
-//            return new URL("http://localhost:4444");
+            return new URL(remoteUrl);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

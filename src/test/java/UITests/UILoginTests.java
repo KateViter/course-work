@@ -5,42 +5,49 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static UITests.elements.LoginData.*;
+import static UITests.elements.LoginElements.*;
+
 public class UILoginTests extends BaseTest{
+
+    private final static String wrongName = "test";
+    private final static String wrongPass = "123456789";
+    private final static String errorMessage = "Bad username or password";
 
     @Test(priority = 1)
     public void wrongNameLogin() {
-        driver.get("http://192.168.31.253/login");
-        WebElement usernameField = driver.findElement(By.name("username"));
-        usernameField.sendKeys("test");
-        WebElement passField = driver.findElement(By.name("password"));
-        passField.sendKeys("admin");
-        WebElement submitBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        driver.get(loginUrl);
+        WebElement usernameField = driver.findElement(By.xpath(loginUsernameField));
+        usernameField.sendKeys(wrongName);
+        WebElement passField = driver.findElement(By.xpath(loginPassField));
+        passField.sendKeys(loginPass);
+        WebElement submitBtn = driver.findElement(By.xpath(loginSubmitBtn));
         submitBtn.click();
-        WebElement errorText = driver.findElement(By.xpath("//p[text()='Bad username or password']"));
-        Assert.assertEquals(errorText.getText(), "Bad username or password");
+        WebElement errorText = driver.findElement(By.xpath(loginErrorMessage));
+        Assert.assertEquals(errorText.getText(), errorMessage);
     }
 
     @Test(priority = 1)
     public void wrongPassLogin() {
-        driver.get("http://192.168.31.253/login");
-        WebElement usernameField = driver.findElement(By.name("username"));
-        usernameField.sendKeys("admin");
-        WebElement passField = driver.findElement(By.name("password"));
-        passField.sendKeys("123456789");
-        WebElement submitBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        driver.get(loginUrl);
+        WebElement usernameField = driver.findElement(By.xpath(loginUsernameField));
+        usernameField.sendKeys(loginName);
+        WebElement passField = driver.findElement(By.xpath(loginPassField));
+        passField.sendKeys(wrongPass);
+        WebElement submitBtn = driver.findElement(By.xpath(loginSubmitBtn));
         submitBtn.click();
-        WebElement errorText = driver.findElement(By.xpath("//p[text()='Bad username or password']"));
-        Assert.assertEquals(errorText.getText(), "Bad username or password");
+        WebElement errorText = driver.findElement(By.xpath(loginErrorMessage));
+        Assert.assertEquals(errorText.getText(), errorMessage);
     }
 
     @Test(priority = 2)
     public void positiveLogin() {
-        driver.get("http://192.168.31.253/login");
-        WebElement usernameField = driver.findElement(By.name("username"));
-        usernameField.sendKeys("admin");
-        WebElement passField = driver.findElement(By.name("password"));
-        passField.sendKeys("admin");
-        WebElement submitBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        driver.get(loginUrl);
+        WebElement usernameField = driver.findElement(By.xpath(loginUsernameField));
+        usernameField.sendKeys(loginName);
+        WebElement passField = driver.findElement(By.xpath(loginPassField));
+        passField.sendKeys(loginPass);
+        WebElement submitBtn = driver.findElement(By.xpath(loginSubmitBtn));
         submitBtn.click();
     }
 }
