@@ -13,11 +13,11 @@ public class BaseTest {
     protected RemoteWebDriver driver;
     // selenium-firefox to run in remote browser in another container with firefox browser
     // should be selected by running via Jenkins
-    private final static String remoteUrl = "http://selenium-firefox:4444";
+//    private final static String remoteUrl = "http://selenium-firefox:4444";
 
     // localhost to run locally in remote browser in another container with firefox browser
     // should be selected by running locally from IDEA
-//    private final static String remoteUrl = "http://localhost:4444";
+    private final static String remoteUrl = "http://localhost:4444";
 
     protected URL remoteUrl() {
         try {
