@@ -6,5 +6,5 @@ import lombok.Getter;
 public class LoginData {
     public static final String loginName = "admin";
     public static final String loginPass = "admin";
-    public static final String loginUrl = "http://192.168.31.253/login";
+    public static final String loginUrl = "http://192.168.0.192/login:4444";
 }
