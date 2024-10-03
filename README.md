@@ -9,6 +9,12 @@ to setup it correctly you have to:
 5. Add local Jenkins and selenium-firefox in one network by next command:
 - docker network connect jenkins selenium-firefox
 
+** Update ip address in code:
+Local IP address of the PC has been used to run tests. So it might be changed regarding PC and network where tests are running.
+For now it should be chenged in next classes:
+1. APITests.java - variable: baseUrl
+2. LoginData.java - variable: loginUrl
+
 ** Run tests
 1. Go to Jenkins by http://localhost:8080/
 2. configure Jenkins
