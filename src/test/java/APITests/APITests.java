@@ -14,13 +14,14 @@ public class APITests {
 
     // class variables
     private final int ownerId = 1;
-    private final String baseUrl = "http://192.168.31.253/jsonrpc.php";
+    private final String baseUrl = "http://127.0.0.1/jsonrpc.php";
     private final String authUser = "admin";
     private final String authPassword = "admin";
     private final String jsonrpcVersion = "2.0";
     private int userId;
     private int projectId;
     private int taskId;
+
 
     @BeforeClass
     public void setUp(){
