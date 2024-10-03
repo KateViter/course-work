@@ -14,7 +14,7 @@ public class APITests {
 
     // class variables
     private final int ownerId = 1;
-    private final String baseUrl = "http://127.0.0.1/jsonrpc.php";
+    private final String baseUrl = "http://192.168.0.192/jsonrpc.php";
     private final String authUser = "admin";
     private final String authPassword = "admin";
     private final String jsonrpcVersion = "2.0";
